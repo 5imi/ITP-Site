@@ -46,3 +46,4 @@
   - Adăugată secțiunea `#probleme` (căutări de tip problemă: Check Engine, bătaie roată, revenire ITP, zgârieturi vopsitorie, pană, camioane >3,5t).
   - Adăugate butoane directe **Deschide Google Maps** + **Navighează cu Waze** în `#contact` și bară fixă mobilă `.mob-sticky-bar` (`Sună` • `WhatsApp` • `Waze / Hartă`).
 - **Poze reale ACW Fălticeni & Rating Google:** preluate de pe telefonul conectat 3 poze reale ale stației/halei (`statie-itp-acw-falticeni.jpg`, `service-auto-diagnoza-falticeni.jpg`, `vopsitorie-vulcanizare-acw-falticeni.jpg`) și adăugat rating-ul real `5,0 ★ (82 recenzii Google)` în Hero + `aggregateRating` în `Schema.org`.
+- **Eliminare expresii de șablon AI:** înlocuite cele 5 texte generice din `index.html` cu formulări tehnice directe și sobre (conform regulii din `AGENTS.md`).
