@@ -23,6 +23,7 @@
 - Se aplică regulile globale din `D:\Proiecte\AGENTS.md` (Temă Deschisă exclusiv, fără iconițe/clișee AI, marcare descriptivă pe toate modulele/secțiunile, `MEMORY.md` actualizat înainte de commit).
 
 ## 4. Implementare Inițială Site Public (27 noiembrie 2026)
+
 - **Skill consultat:** `ui-ux-pro-max` (`--design-system` pentru ACW Fălticeni, Trust & Authority + Flat Light Design).
 - **Fișiere create în `D:\Proiecte\ITP-Site`:**
   - `index.html` — structură completă în limba română cu secțiunile: Topbar, Header/Nav, Hero, Servicii (`Stație ITP`, `Service Auto & Mecanică`, `Vopsitorie Auto`, `Vulcanizare & Roți`), Despre noi, Atelier/Galerie, Contact & Hartă Google Maps Fălticeni, Footer cu datele legale `AUTOMOTIVE CENTER WERKSTAT S.R.L.` (`CUI: 47740129`, `J33/463/2023`, `CAEN 4520`).
