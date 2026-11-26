@@ -1,0 +1,662 @@
+/* Variabile globale Tema Deschisa 2027: Paleta luminoasa (#f8fafc fundal, #ffffff carduri, #eff6ff accente soft), albastru #1e40af si rosu ACW #dc2626. */
+:root {
+  --bg-page: #f8fafc;
+  --bg-muted: #f1f5f9;
+  --bg-soft-blue: #eff6ff;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+  --primary: #1e40af;
+  --primary-hover: #1e3a8a;
+  --accent-red: #dc2626;
+  --accent-wa: #15803d;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Reset si baza tipografica: Font Open Sans pentru text curent (16px) si Poppins pentru titluri, fara scroll orizontal. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-body);
+  background-color: var(--bg-page);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .brand-name {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* Bara superioara (#topbar): Fundal inchis contrastant #0f172a cu text alb #ffffff pentru adresa, program si telefon. */
+.topbar {
+  background: var(--text-main);
+  color: #f8fafc;
+  font-size: 0.85rem;
+  padding-block: 8px;
+}
+
+.topbar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 20px;
+}
+
+.topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topbar-phone {
+  font-weight: 700;
+  color: #93c5fd;
+}
+
+/* Antet si navigare principala (#header): Fundal alb translucid cu blur discret, sticky sus si bordura #e2e8f0. */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 72px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  border-radius: 50%;
+  border: 2px solid var(--border-light);
+  object-fit: cover;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.brand-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--text-body);
+  padding: 8px 4px;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Butoane globale (.btn): Dimensiune tactila minim 44px inaltime, colturi 10px si tranzitii rapide. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.94rem;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.btn-lg {
+  min-height: 48px;
+  padding: 12px 24px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: var(--text-main);
+  border-color: #cbd5e1;
+}
+
+.btn-outline:hover {
+  background: var(--bg-soft-blue);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-wa {
+  background: var(--accent-wa);
+  color: #ffffff;
+}
+
+.btn-wa:hover {
+  background: #166534;
+}
+
+/* Buton meniu mobil (.nav-toggle): Vizibil sub 960px. */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text-main);
+  border-radius: 2px;
+}
+
+/* Sectiune Hero (#acasa): Gradient luminos discret (#eff6ff -> #ffffff), layout 2 coloane si badge-uri rapide. */
+.hero {
+  background: linear-gradient(180deg, var(--bg-soft-blue) 0%, #ffffff 100%);
+  padding-block: 56px 64px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: #dbeafe;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-size: clamp(1.9rem, 3.6vw, 2.85rem);
+  line-height: 1.18;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  font-size: 1.04rem;
+  color: var(--text-body);
+  margin: 0 0 24px;
+  max-width: 58ch;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero-badges {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hero-badge-item {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-badge-item strong {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.98rem;
+}
+
+.hero-badge-item span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.hero-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Sectiuni generale (.section / .section-muted): Spatiere aerisita si antet centrat. */
+.section {
+  padding-block: 68px;
+  background: #ffffff;
+}
+
+.section-muted {
+  background: var(--bg-muted);
+  border-block: 1px solid var(--border-light);
+}
+
+.section-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 42px;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.15rem);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  margin: 0;
+  color: var(--text-body);
+}
+
+/* Grila Servicii (#servicii): 4 carduri egale (ITP, Service Auto, Vopsitorie, Vulcanizare) cu bordura clara si puncte cheie. */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.service-card:hover {
+  border-color: #93c5fd;
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.service-icon-blue {
+  background: #dbeafe;
+}
+
+.service-icon-red {
+  background: #fee2e2;
+}
+
+.service-icon-orange {
+  background: #ffedd5;
+}
+
+.service-card h3 {
+  font-size: 1.12rem;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-body);
+}
+
+.service-points {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.service-points li + li {
+  margin-top: 4px;
+}
+
+/* Sectiune Despre Noi (#despre): Layout 2 coloane cu imagine atelier si 4 casete statistice. */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-img {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  background: var(--bg-soft-blue);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.stat-box {
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.stat-val {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-lbl {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+/* Sectiune Galerie Atelier (#galerie): 3 carduri foto responsive pentru ITP, Service si Vopsitorie/Vulcanizare. */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.work-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.work-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.work-body {
+  padding: 16px 18px;
+}
+
+.work-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.work-body h3 {
+  font-size: 1.02rem;
+}
+
+/* Sectiune Contact & Harta (#contact): Card date contact si iframe Google Maps Falticeni. */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.contact-card {
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.contact-row strong {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.contact-row a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.map-card {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 340px;
+  background: var(--bg-muted);
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  border: 0;
+}
+
+/* Subsol (#footer): Fundal alb curat, bordura sus #e2e8f0 si date legale firma. */
+.footer {
+  background: var(--bg-muted);
+  border-top: 1px solid var(--border-light);
+  padding-block: 24px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand img {
+  border-radius: 50%;
+}
+
+.footer-brand strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.footer-brand span,
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Stiluri responsive Tableta si Mobil (<= 960px / <= 640px): Adaptare grile si meniu mobil. */
+@media (max-width: 960px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-light);
+    padding: 14px 20px;
+    display: none;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav.open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 10px 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid,
+  .gallery-grid,
+  .hero-badges {
+    grid-template-columns: 1fr;
+  }
+
+  .header-actions .btn-primary {
+    display: none;
+  }
+}
+
+/* Respectare preferinta sistem pentru miscare redusa (accessibility reduced-motion). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
