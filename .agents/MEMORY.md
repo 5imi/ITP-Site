@@ -49,3 +49,4 @@
 - **Eliminare expresii de șablon AI:** înlocuite cele 5 texte generice din `index.html` cu formulări tehnice directe și sobre (conform regulii din `AGENTS.md`).
 - **Conformitate Legală România (ANPC & GDPR):** adăugate în `<footer>` linkurile obligatorii ANPC **SAL** (`anpc.ro/ce-este-sal/`) și **SOL** (`ec.europa.eu/consumers/odr`), adresa completă a sediului social și fereastra `<dialog id="gdprDialog">` cu Informarea GDPR & Cookies.
 - **Banner Cookie & GDPR (`#cookieBanner`):** card compact afișat automat la prima accesare, cu butoane `Detalii GDPR` și `Am înțeles` (salvare în `localStorage`).
+- **Iconițe SVG dedicate pe cardurile Servicii (`#servicii`):** înlocuite PNG-urile nepotrivite din referința `autofix` (baterie pe Vopsitorie etc.) cu 4 iconițe vectoriale SVG dedicate: Scut cu bifă (`Stație ITP`), Cheie mecanică (`Service Auto`), Pulverizator vopsea (`Vopsitorie Auto`) și Roată/Anvelopă cu 6 spițe (`Vulcanizare & Roți`).

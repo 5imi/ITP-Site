@@ -413,14 +413,22 @@ a {
 
 .service-icon-blue {
   background: #dbeafe;
+  color: #1e40af;
+}
+
+.service-icon-indigo {
+  background: #e0e7ff;
+  color: #3730a3;
 }
 
 .service-icon-red {
   background: #fee2e2;
+  color: #b91c1c;
 }
 
 .service-icon-orange {
   background: #ffedd5;
+  color: #c2410c;
 }
 
 .service-card h3 {
