@@ -37,3 +37,6 @@
 - **Extindere FAQ SEO (`#intrebari`):** adăugate încă 6 întrebări (total 10 în HTML și `FAQPage` JSON-LD) acoperind Clasele I–III RAR (>3,5t, moto/ATV), procedura de revenire, termenul de 30 de zile înainte de expirare, vopsitorie, vulcanizare și acoperirea regională E85.
 - **Integrare Pagină Facebook:** adăugat linkul oficial (`https://www.facebook.com/profile.php?id=61553095747846`) în secțiunea `#contact` (rând + buton `.btn-fb`), în `#footer` și în `Schema.org` (`sameAs`).
 - **Numere de telefon reale:** adăugate `0740 702 881` și `0733 819 222` în Topbar, Hero CTA, `#contact` (inclusiv WhatsApp `40740702881`) și `Schema.org` (`telephone`).
+- **Extindere FAQ SEO (`#intrebari`):** adăugate încă 6 întrebări (total 10 în HTML și `FAQPage` JSON-LD) acoperind Clasele I–III RAR (>3,5t, moto/ATV), procedura de revenire, termenul de 30 de zile înainte de expirare, vopsitorie, vulcanizare și acoperirea regională E85.
+- **Integrare Pagină Facebook:** adăugat linkul oficial (`https://www.facebook.com/profile.php?id=61553095747846`) în secțiunea `#contact` (rând + buton `.btn-fb`), în `#footer` și în `Schema.org` (`sameAs`).
+- **Numere de telefon reale:** adăugate `0740 702 881` și `0733 819 222` în Topbar, Hero CTA, `#contact` (inclusiv WhatsApp `40740702881`) și `Schema.org` (`telephone`).
