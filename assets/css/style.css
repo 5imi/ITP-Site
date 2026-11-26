@@ -235,6 +235,16 @@ a {
   text-decoration: underline;
 }
 
+/* Buton Waze (.btn-waze): Albastru deschis Waze #0284c7 cu text alb #ffffff. */
+.btn-waze {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.btn-waze:hover {
+  background: #0369a1;
+}
+
 /* Buton meniu mobil (.nav-toggle): Vizibil sub 960px. */
 .nav-toggle {
   display: none;
@@ -512,6 +522,33 @@ a {
   font-size: 1.02rem;
 }
 
+/* Sectiune Probleme Frecvente (#probleme): Grila 3 coloane desktop cu carduri albe pentru cautari de tip problema. */
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.problem-card {
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 18px;
+}
+
+.problem-card strong {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.96rem;
+  margin-bottom: 6px;
+}
+
+.problem-card span {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
 /* Sectiune Intrebari Frecvente (#intrebari): Acordeon curat pe 2 coloane desktop si 1 coloana mobil. */
 .faq-grid {
   display: grid;
@@ -662,8 +699,14 @@ a {
 }
 
 /* Stiluri responsive Tableta si Mobil (<= 960px / <= 640px): Adaptare grile si meniu mobil. */
+/* Bara fixa jos pe mobil (.mob-sticky-bar): Ascunsa pe desktop, vizibila sub 640px pentru apel/WhatsApp/Waze 1-tap. */
+.mob-sticky-bar {
+  display: none;
+}
+
 @media (max-width: 960px) {
-  .services-grid {
+  .services-grid,
+  .problems-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -708,7 +751,12 @@ a {
 }
 
 @media (max-width: 640px) {
+  body {
+    padding-bottom: 66px;
+  }
+
   .services-grid,
+  .problems-grid,
   .gallery-grid,
   .hero-badges {
     grid-template-columns: 1fr;
@@ -716,6 +764,44 @@ a {
 
   .header-actions .btn-primary {
     display: none;
+  }
+
+  .mob-sticky-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 120;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 1px solid var(--border-light);
+    box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
+  }
+
+  .mob-sticky-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.86rem;
+    color: #ffffff;
+  }
+
+  .mob-sticky-call {
+    background: var(--primary);
+  }
+
+  .mob-sticky-wa {
+    background: var(--accent-wa);
+  }
+
+  .mob-sticky-waze {
+    background: #0284c7;
   }
 }
 

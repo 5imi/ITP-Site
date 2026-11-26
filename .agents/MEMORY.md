@@ -41,3 +41,7 @@
 - **Integrare Pagină Facebook:** adăugat linkul oficial (`https://www.facebook.com/profile.php?id=61553095747846`) în secțiunea `#contact` (rând + buton `.btn-fb`), în `#footer` și în `Schema.org` (`sameAs`).
 - **Numere de telefon reale:** adăugate `0740 702 881` și `0733 819 222` în Topbar, Hero CTA, `#contact` (inclusiv WhatsApp `40740702881`) și `Schema.org` (`telephone`).
 - **Reper locație:** adăugat rândul `Reper: Zona Gării Fălticeni (acces rapid din E85 / DN2)` în `#contact` și în răspunsul FAQ aferent.
+- **Aplicare tactici avansate SEO & Conversie:**
+  - Redenumite imaginile din galerie cu nume SEO (`statie-itp-acw-falticeni.jpg`, `service-auto-diagnoza-falticeni.jpg`, `vopsitorie-vulcanizare-acw-falticeni.jpg`) + `loading="lazy"`.
+  - Adăugată secțiunea `#probleme` (căutări de tip problemă: Check Engine, bătaie roată, revenire ITP, zgârieturi vopsitorie, pană, camioane >3,5t).
+  - Adăugate butoane directe **Deschide Google Maps** + **Navighează cu Waze** în `#contact` și bară fixă mobilă `.mob-sticky-bar` (`Sună` • `WhatsApp` • `Waze / Hartă`).
