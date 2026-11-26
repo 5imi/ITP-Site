@@ -508,6 +508,17 @@
     </div>
   </footer>
 
+  <!-- Banner informare Cookie & GDPR (#cookieBanner): Apare la prima vizita si se ascunde dupa confirmare in localStorage. -->
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Informare cookie-uri" hidden>
+    <p>
+      Acest site nu folosește cookie-uri de reclame sau tracking — doar funcții tehnice esențiale și harta Google Maps.
+    </p>
+    <div class="cookie-banner-actions">
+      <button type="button" class="legal-link legal-link-btn" id="bannerGdprBtn">Detalii GDPR</button>
+      <button type="button" class="btn btn-primary cookie-ok-btn" id="acceptCookiesBtn">Am înțeles</button>
+    </div>
+  </div>
+
   <!-- Fereastra Informare GDPR (#gdprDialog): Detalii legale privind prelucrarea datelor si lipsa cookie-urilor de tracking. -->
   <dialog class="gdpr-dialog" id="gdprDialog" aria-labelledby="gdprTitle">
     <div class="gdpr-head">

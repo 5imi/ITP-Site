@@ -36,4 +36,31 @@
       if (e.target === gdprDialog) gdprDialog.close();
     });
   }
+
+  /* Banner Cookie & GDPR (#cookieBanner): Afisat la prima vizita pana la confirmare */
+  const cookieBanner = document.getElementById('cookieBanner');
+  const acceptCookiesBtn = document.getElementById('acceptCookiesBtn');
+  const bannerGdprBtn = document.getElementById('bannerGdprBtn');
+  if (cookieBanner) {
+    let ack = false;
+    try {
+      ack = localStorage.getItem('acw_cookie_ack') === '1';
+    } catch (_) {
+      ack = false;
+    }
+    if (!ack) {
+      cookieBanner.hidden = false;
+    }
+    if (acceptCookiesBtn) {
+      acceptCookiesBtn.addEventListener('click', () => {
+        try {
+          localStorage.setItem('acw_cookie_ack', '1');
+        } catch (_) {}
+        cookieBanner.hidden = true;
+      });
+    }
+    if (bannerGdprBtn && gdprDialog) {
+      bannerGdprBtn.addEventListener('click', () => gdprDialog.showModal());
+    }
+  }
 })();
