@@ -23,4 +23,17 @@
       });
     });
   }
+  /* Deschidere/inchidere fereastra Informare GDPR & Cookies (#gdprDialog) */
+  const gdprDialog = document.getElementById('gdprDialog');
+  const openGdprBtn = document.getElementById('openGdprBtn');
+  const closeGdprBtn = document.getElementById('closeGdprBtn');
+  if (gdprDialog && openGdprBtn) {
+    openGdprBtn.addEventListener('click', () => gdprDialog.showModal());
+    if (closeGdprBtn) {
+      closeGdprBtn.addEventListener('click', () => gdprDialog.close());
+    }
+    gdprDialog.addEventListener('click', (e) => {
+      if (e.target === gdprDialog) gdprDialog.close();
+    });
+  }
 })();

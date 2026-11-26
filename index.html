@@ -480,16 +480,27 @@
     </section>
   </main>
 
-  <!-- Subsol (#footer): Date juridice obligatorii AUTOMOTIVE CENTER WERKSTAT S.R.L. (CUI, J33/463/2023, CAEN 4520). -->
+  <!-- Subsol (#footer): Date juridice obligatorii AUTOMOTIVE CENTER WERKSTAT S.R.L., linkuri ANPC (SAL/SOL) si Informare GDPR. -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="./assets/images/aw-logo.png" alt="ACW Fălticeni" width="38" height="38">
         <div>
           <strong>AUTOMOTIVE CENTER WERKSTAT S.R.L.</strong>
-          <span>CUI: 47740129 • Reg. Com.: J33/463/2023 • CAEN 4520</span>
+          <span>CUI: 47740129 • Reg. Com.: J33/463/2023 • Str. Magazia Gării, nr. 3F, Fălticeni, SV</span>
         </div>
       </div>
+
+      <div class="footer-legal">
+        <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener" class="anpc-badge">
+          ANPC — SAL (Soluționarea Alternativă a Litigiilor)
+        </a>
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" class="anpc-badge">
+          SOL — Soluționarea Online a Litigiilor (UE)
+        </a>
+        <button type="button" class="anpc-badge gdpr-btn" id="openGdprBtn">Informare GDPR &amp; Cookies</button>
+      </div>
+
       <div class="footer-copy">
         <a href="https://www.facebook.com/profile.php?id=61553095747846" target="_blank" rel="noopener"
           class="footer-fb-link">Facebook ACW Fălticeni</a>
@@ -498,6 +509,30 @@
       </div>
     </div>
   </footer>
+
+  <!-- Fereastra Informare GDPR (#gdprDialog): Detalii legale privind prelucrarea datelor si lipsa cookie-urilor de tracking. -->
+  <dialog class="gdpr-dialog" id="gdprDialog" aria-labelledby="gdprTitle">
+    <div class="gdpr-head">
+      <h2 id="gdprTitle">Informare GDPR &amp; Politica de Confidențialitate</h2>
+      <button type="button" class="gdpr-close" id="closeGdprBtn" aria-label="Închide">×</button>
+    </div>
+    <div class="gdpr-body">
+      <p>
+        <strong>Operator date:</strong> AUTOMOTIVE CENTER WERKSTAT S.R.L., CUI 47740129, J33/463/2023, cu sediul în
+        Str. Magazia Gării, nr. 3F, Fălticeni, jud. Suceava.
+      </p>
+      <p>
+        <strong>Date colectate pe acest site:</strong> Acest site este exclusiv de prezentare și <strong>nu stochează
+        date personale pe server</strong>, nu are formulare de colectare și nu utilizează cookie-uri de publicitate
+        sau urmărire (tracking).
+      </p>
+      <p>
+        <strong>Contact direct &amp; Hartă:</strong> Apelurile telefonice (<code>0740 702 881</code> /
+        <code>0733 819 222</code>) și mesajele WhatsApp sunt inițiate direct de dumneavoastră pentru programări.
+        Harta interactivă din secțiunea Contact este furnizată prin Google Maps.
+      </p>
+    </div>
+  </dialog>
 
   <!-- Bara fixa rapida mobil (.mob-sticky-bar): Conversie 1-tap pe telefon (Suna, WhatsApp, Waze). -->
   <nav class="mob-sticky-bar" aria-label="Acțiuni rapide mobil">

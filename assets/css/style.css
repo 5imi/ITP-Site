@@ -698,6 +698,81 @@ a {
   color: var(--text-muted);
 }
 
+/* Linkuri legale ANPC (SAL/SOL) si dialog GDPR (#gdprDialog): Butoane curate in subsol si fereastra modala Light Theme. */
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.anpc-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 12px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.anpc-badge:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.gdpr-dialog {
+  max-width: 520px;
+  width: calc(100% - 24px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  background: #ffffff;
+  color: var(--text-body);
+  box-shadow: var(--shadow-md);
+}
+
+.gdpr-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.gdpr-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.gdpr-head h2 {
+  font-size: 1.08rem;
+}
+
+.gdpr-close {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--bg-page);
+  color: var(--text-main);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gdpr-body p {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+}
+
+.gdpr-body p:last-child {
+  margin-bottom: 0;
+}
+
 /* Stiluri responsive Tableta si Mobil (<= 960px / <= 640px): Adaptare grile si meniu mobil. */
 /* Bara fixa jos pe mobil (.mob-sticky-bar): Ascunsa pe desktop, vizibila sub 640px pentru apel/WhatsApp/Waze 1-tap. */
 .mob-sticky-bar {
