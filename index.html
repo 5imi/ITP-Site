@@ -5,11 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Meta SEO principal: Titlu, descriere si cuvinte cheie pentru ACW Falticeni (ITP, Service Auto, Vopsitorie, Vulcanizare). -->
-  <title>ACW Fălticeni • Stație ITP, Service Auto, Vopsitorie & Vulcanizare</title>
+  <!-- Meta SEO principal: Titlu, descriere, indexare, Open Graph si Twitter Cards pentru ACW Falticeni (ITP, Service Auto, Vopsitorie, Vulcanizare). -->
+  <title>Stație ITP Fălticeni • ACW Service Auto, Vopsitorie &amp; Vulcanizare</title>
   <meta name="description"
-    content="Automotive Center Werkstat Fălticeni — Stație ITP autorizată, Service Auto complet, Vopsitorie și Vulcanizare pe Str. Magazia Gării nr. 3F, Fălticeni.">
+    content="Stație ITP autorizată în Fălticeni (3 linii), Service Auto multimarcă, Vopsitorie și Vulcanizare la ACW — Str. Magazia Gării nr. 3F. Program L–S 08:00–17:30.">
+  <meta name="keywords"
+    content="statie ITP Falticeni, ITP Falticeni, service auto Falticeni, vopsitorie auto Falticeni, vulcanizare Falticeni, ACW Falticeni, Automotive Center Werkstat">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="ACW Fălticeni • Stație ITP, Service Auto, Vopsitorie &amp; Vulcanizare">
+  <meta property="og:description"
+    content="Inspecție Tehnică Periodică pe 3 linii, mecanică auto, vopsitorie și vulcanizare pe Str. Magazia Gării nr. 3F, Fălticeni.">
+  <meta property="og:image" content="./assets/images/aw-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1e40af">
   <link rel="icon" type="image/png" href="./assets/images/aw-logo.png">
+  <link rel="manifest" href="./site.webmanifest">
 
   <!-- Fonturi Google (Poppins + Open Sans): Tipografie moderna, clara si lizibila pentru Tema Deschisa 2027. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,6 +82,7 @@
           <li><a href="#servicii" class="nav-link">Servicii</a></li>
           <li><a href="#despre" class="nav-link">Despre noi</a></li>
           <li><a href="#galerie" class="nav-link">Atelier</a></li>
+          <li><a href="#intrebari" class="nav-link">Întrebări ITP</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -288,6 +301,38 @@
       </div>
     </section>
 
+    <!-- Sectiune Intrebari Frecvente SEO (#intrebari): Raspunsuri rapide pentru cautari locale ITP Falticeni (acte necesare, durata, programare). -->
+    <section class="section section-muted" id="intrebari">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">ÎNTREBĂRI FRECVENTE</span>
+          <h2 class="section-title">Informații utile înainte să vii la Stația ITP</h2>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>Ce acte sunt necesare pentru ITP la ACW Fălticeni?</summary>
+            <p>Ai nevoie de certificatul de înmatriculare (talonul) în original, cartea de identitate a vehiculului (CIV), asigurarea RCA valabilă și actul de identitate al persoanei care prezintă mașina.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Cât durează o inspecție ITP și este nevoie de programare?</summary>
+            <p>Dispunem de 3 linii ITP active, astfel încât verificarea durează rapid. Recomandăm programarea telefonică în avans pentru a intra direct la ora stabilită, fără timp de așteptare.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Pot rezolva eventualele probleme mecanice sau de anvelope tot la voi?</summary>
+            <p>Da. În același punct de lucru de pe Str. Magazia Gării nr. 3F oferim Service Auto complet, Vopsitorie Auto și Vulcanizare, astfel încât poți remedia rapid orice neconformitate.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Care este programul și unde vă găsim în Fălticeni?</summary>
+            <p>Suntem deschiși Luni – Sâmbătă între orele 08:00 și 17:30, pe Str. Magazia Gării, nr. 3F, Fălticeni, județul Suceava.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Sectiune Contact & Harta (#contact): Date oficiale firma, adresa, program, telefon/WhatsApp si harta Falticeni. -->
     <section class="section" id="contact">
       <div class="container contact-grid">
@@ -347,6 +392,77 @@
       </div>
     </div>
   </footer>
+
+  <!-- Date Structurate SEO (Schema.org JSON-LD AutoRepair + FAQPage): Indexare locala Google pentru ACW Falticeni. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AutoRepair",
+        "name": "ACW Fălticeni — Automotive Center Werkstat S.R.L.",
+        "legalName": "AUTOMOTIVE CENTER WERKSTAT S.R.L.",
+        "taxID": "47740129",
+        "description": "Stație ITP autorizată (3 linii), Service Auto multimarcă, Vopsitorie Auto și Vulcanizare în Fălticeni, jud. Suceava.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Str. Magazia Gării, nr. 3F",
+          "addressLocality": "Fălticeni",
+          "addressRegion": "SV",
+          "postalCode": "725200",
+          "addressCountry": "RO"
+        },
+        "areaServed": "Fălticeni, Suceava",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "17:30"
+          }
+        ],
+        "knowsAbout": ["Stație ITP", "Service Auto", "Vopsitorie Auto", "Vulcanizare"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ce acte sunt necesare pentru ITP la ACW Fălticeni?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Certificatul de înmatriculare (talonul) în original, cartea de identitate a vehiculului (CIV), asigurarea RCA valabilă și actul de identitate al conducătorului."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cât durează o inspecție ITP și este nevoie de programare?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dispunem de 3 linii ITP active pentru verificare rapidă. Recomandăm programarea telefonică în avans pentru a intra direct la ora stabilită."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pot rezolva eventualele probleme mecanice sau de anvelope tot la voi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, pe Str. Magazia Gării nr. 3F oferim și Service Auto complet, Vopsitorie Auto și Vulcanizare."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Care este programul și unde vă găsim în Fălticeni?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Luni – Sâmbătă, 08:00 – 17:30, pe Str. Magazia Gării, nr. 3F, Fălticeni, jud. Suceava."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Script navigare mobila si an curent -->
   <script src="./assets/js/main.js"></script>

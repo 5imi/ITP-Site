@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /.agents/
+
+# Nota: Dupa configurarea domeniului final, actualizeaza linia Sitemap cu URL-ul complet.
+Sitemap: /sitemap.xml

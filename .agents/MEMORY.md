@@ -31,3 +31,4 @@
   - `assets/images/` — sigla `aw-logo.png` + resursele vizuale din referința `autofix`.
 - **Verificare:** `node --check assets/js/main.js` și balans acolade CSS (`0` erori); toate secțiunile sunt marcate cu comentarii descriptive conform `AGENTS.md`.
 - **Tunel Cloudflare local:** adăugat `tools/cloudflared.exe` (exclus din Git via `.gitignore`) și scriptul `start_cloudflare.bat` pentru pornire rapidă (`http://127.0.0.1:8091`).
+- **Optimizare SEO Local & Tehnic:** adăugate `<title>` și `<meta description/keywords>` localizate (`Fălticeni`), Open Graph + Twitter Cards, `Schema.org` JSON-LD (`AutoRepair` + `FAQPage`), secțiune vizibilă `#intrebari` (`FAQ`), `robots.txt`, `sitemap.xml` și `site.webmanifest`.
