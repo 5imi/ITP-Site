@@ -216,6 +216,25 @@ a {
   background: #166534;
 }
 
+/* Buton Facebook (.btn-fb) si link subsol (.footer-fb-link): Albastru Facebook #1877f2 cu text alb #ffffff. */
+.btn-fb {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.btn-fb:hover {
+  background: #166fe5;
+}
+
+.footer-fb-link {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.footer-fb-link:hover {
+  text-decoration: underline;
+}
+
 /* Buton meniu mobil (.nav-toggle): Vizibil sub 960px. */
 .nav-toggle {
   display: none;
