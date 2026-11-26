@@ -32,3 +32,4 @@
 - **Verificare:** `node --check assets/js/main.js` și balans acolade CSS (`0` erori); toate secțiunile sunt marcate cu comentarii descriptive conform `AGENTS.md`.
 - **Tunel Cloudflare local:** adăugat `tools/cloudflared.exe` (exclus din Git via `.gitignore`) și scriptul `start_cloudflare.bat` pentru pornire rapidă (`http://127.0.0.1:8091`).
 - **Optimizare SEO Local & Tehnic:** adăugate `<title>` și `<meta description/keywords>` localizate (`Fălticeni`), Open Graph + Twitter Cards, `Schema.org` JSON-LD (`AutoRepair` + `FAQPage`), secțiune vizibilă `#intrebari` (`FAQ`), `robots.txt`, `sitemap.xml` și `site.webmanifest`.
+- **SEO Regional & Autorizare RAR:** adăugate în `index.html` și `style.css` autorizarea **Clasele I, II, III RAR** (auto, moto/ATV, >3,5t), caseta vizibilă „Zone deservite (acces rapid din E85 / DN2)” și lista structurată `areaServed` în `Schema.org` JSON-LD pentru Fălticeni, comunele limitrofe, Suceava, Pașcani, Gura Humorului și Târgu Neamț.
