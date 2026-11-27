@@ -36,6 +36,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Link accesibilitate navigare tastatura (.skip-link): Vizibil doar la focus pentru Accessibility 100. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 999;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  left: 12px;
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
@@ -79,7 +96,7 @@ a {
   border-bottom: 1px solid var(--border-light);
   font-size: 0.84rem;
   font-weight: 500;
-  padding-block: 7px;
+  padding-block: 4px;
 }
 
 .topbar-inner {
@@ -97,6 +114,10 @@ a {
 }
 
 .topbar-phone {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding-inline: 4px;
   font-weight: 700;
   color: #1e40af;
 }
@@ -105,7 +126,7 @@ a {
   text-decoration: underline;
 }
 
-/* Antet si navigare principala (#header): Fundal alb-crem #faf7f2 cu bordura #d8d3ca si element activ rosu ACW (#dc2626 pe #fee2e2). */
+/* Antet si navigare principala (#header): Fundal alb-crem #faf7f2 cu bordura #d8d3ca si element activ rosu ACW (#b91c1c pe #fee2e2, contrast WCAG AA >= 5.3:1). */
 .header {
   position: sticky;
   top: 0;
@@ -177,7 +198,7 @@ a {
 
 .nav-link.active {
   background: #fee2e2;
-  color: var(--accent-red);
+  color: #b91c1c;
 }
 
 .header-actions {
@@ -263,20 +284,23 @@ a {
   background: #166534;
 }
 
-/* Buton Facebook (.btn-fb) si link subsol (.footer-fb-link): Albastru Facebook #1877f2 cu bordura tactila si text alb #ffffff. */
+/* Buton Facebook (.btn-fb) si link subsol (.footer-fb-link): Albastru #1558b0 (contrast >= 6.7:1 WCAG AA cu text alb #ffffff). */
 .btn-fb {
-  background: #1877f2;
-  border-color: #1558b0;
-  border-bottom-color: #0e4289;
+  background: #1558b0;
+  border-color: #10458c;
+  border-bottom-color: #0b346b;
   color: #ffffff;
 }
 
 .btn-fb:hover {
-  background: #166fe5;
+  background: #10458c;
 }
 
 .footer-fb-link {
-  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  color: #1e40af;
   font-weight: 600;
 }
 
@@ -284,16 +308,16 @@ a {
   text-decoration: underline;
 }
 
-/* Buton Waze (.btn-waze): Albastru deschis Waze #0284c7 cu bordura tactila si text alb #ffffff. */
+/* Buton Waze (.btn-waze): Albastru #0369a1 (contrast >= 5.9:1 WCAG AA cu text alb #ffffff). */
 .btn-waze {
-  background: #0284c7;
-  border-color: #0369a1;
-  border-bottom-color: #075985;
+  background: #0369a1;
+  border-color: #075985;
+  border-bottom-color: #0c4a6e;
   color: #ffffff;
 }
 
 .btn-waze:hover {
-  background: #0369a1;
+  background: #075985;
 }
 
 /* Buton meniu mobil (.nav-toggle): Vizibil sub 960px. */
@@ -685,8 +709,16 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border-light);
+}
+
+.contact-row span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 6px;
 }
 
 .contact-row strong {
@@ -695,6 +727,10 @@ a {
 }
 
 .contact-row a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding-inline: 2px;
   color: var(--primary);
   font-weight: 600;
 }
@@ -790,6 +826,10 @@ a {
 }
 
 .legal-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 2px 4px;
   color: var(--text-muted);
   font-size: 0.74rem;
   font-weight: 500;
@@ -804,7 +844,7 @@ a {
 .legal-link-btn {
   background: transparent;
   border: 0;
-  padding: 0;
+  padding: 2px 4px;
   cursor: pointer;
   font-family: inherit;
 }
@@ -929,7 +969,7 @@ a {
   .about-grid,
   .contact-grid,
   .faq-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .nav-toggle {
@@ -1027,9 +1067,9 @@ a {
   }
 
   .mob-sticky-waze {
-    background: #0284c7;
-    border-color: #0369a1;
-    border-bottom-color: #075985;
+    background: #0369a1;
+    border-color: #075985;
+    border-bottom-color: #0c4a6e;
   }
 }
 
