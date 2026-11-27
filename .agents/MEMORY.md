@@ -11,7 +11,7 @@
 
 - **Denumire:** AUTOMOTIVE CENTER WERKSTAT S.R.L.
 - **CUI:** `47740129`
-- **Nr. Reg. Com.:** `J33/463/2023` (`EUID: ROONRC.J2023000463330`)
+- **Nr. Reg. Com.:** `J2023000463330` (`EUID: ROONRC.J2023000463330`, format anterior `J33/463/2023`)
 - **Data înființării:** 2 martie 2023
 - **Adresă:** Str. Magazia Gării, nr. 3F, Fălticeni, jud. Suceava, cod poștal `725200`
 - **Cod CAEN principal:** `4520` — Întreținerea și repararea autovehiculelor
@@ -54,3 +54,4 @@
 - **Optimizare PageSpeed (WebP + Fonturi Asincrone):** convertite toate imaginile afișate în `.webp` optimizat (total redus de la `780 KB` la `166 KB`: ex. `aw-logo.webp` `9 KB`, `hero-banner.webp` `32 KB`), încărcare asincronă Google Fonts (`media="print" onload`), `preload` pe `style.css`, `fetchpriority="high"` pe Hero și `defer` pe `main.js`.
 - **Curățare copy & Accessibility 100 (`index.html`, `style.css`):** înlocuite toate expresiile generice de șablon AI cu limbaj tehnic sobru, adăugat `.skip-link` către `<main id="continut">`, `role="region"` cu `aria-label` pe `.topbar`, mărite zonele tactile pentru linkurile inline (`.topbar-phone`, `.contact-row a`, `.legal-link`, `.footer-fb-link` la `min-height: 28px`) și ajustate nuanțele `.nav-link.active` (`#b91c1c` pe `#fee2e2`, `5.3:1`), `.btn-fb` (`#1558b0`, `6.7:1`) și `.btn-waze` (`#0369a1`, `5.9:1`) pentru contrast WCAG AA ≥ 4.5:1 pe toate elementele. Verificat cu Playwright pe 4 rezoluții (`1280x800`, `768x1024`, `375x812`, `320x568`) cu `0` erori de contrast, overflow sau elemente lipsă.
 - **Simplificare secțiune Contact V1 (`index.html`, `style.css`):** eliminat rândul duplicat `Facebook: ACW Fălticeni (Pagina oficială)` din `.contact-list`, reparată spațierea pe rândul Email și organizate butoanele din `.contact-actions` pe 2 rânduri logice (`.contact-actions-row`: `Sună + WhatsApp` pe rândul 1, `Google Maps + Waze + Facebook` pe rândul 2).
+- **Actualizare date firmă ONRC (`index.html`, `MEMORY.md`):** actualizat numărul de ordine în Registrul Comerțului la formatul nou `J2023000463330` (în `<footer>` și fereastra `<dialog id="gdprDialog">`).
