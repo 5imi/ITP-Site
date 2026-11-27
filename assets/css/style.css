@@ -735,10 +735,17 @@ a {
   font-weight: 600;
 }
 
+/* Grup actiuni Contact (.contact-actions / .contact-actions-row): 2 randuri ordonate (Contact rapid + Directie & Facebook). */
 .contact-actions {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-actions-row {
+  display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 /* Caseta Zone Deservite (SEO Regional): Fundal alb curat cu bordura #e2e8f0 si text compact lizibil. */
