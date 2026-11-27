@@ -1,24 +1,31 @@
-/* Variabile globale Tema Deschisa 2027: Paleta luminoasa (#f8fafc fundal, #ffffff carduri, #eff6ff accente soft), albastru #1e40af si rosu ACW #dc2626. */
+/* Variabile globale Tema Light Calda ACW (aliniata la ITP-Programari): Fundal #e7dfd5 cu model SVG auto, suprafete crem #f5f0e8 / #faf7f2, accente #2563eb si rosu ACW #dc2626. */
 :root {
-  --bg-page: #f8fafc;
-  --bg-muted: #f1f5f9;
+  --bg-page: #e7dfd5;
+  --bg-muted: #f5f0e8;
   --bg-soft-blue: #eff6ff;
-  --bg-card: #ffffff;
+  --bg-card: #faf7f2;
   --text-main: #0f172a;
-  --text-body: #334155;
-  --text-muted: #64748b;
-  --border-light: #e2e8f0;
-  --primary: #1e40af;
-  --primary-hover: #1e3a8a;
+  --text-body: #1e293b;
+  --text-muted: #475569;
+  --border-light: #d8d3ca;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
   --accent-red: #dc2626;
   --accent-wa: #15803d;
+  --tone-prog-bg: #e6f0fb;
+  --tone-prog-border: #b9d2ef;
+  --tone-final-bg: #e3f7df;
+  --tone-final-border: #b7dfb1;
+  --tone-rev-bg: #f9f1fb;
+  --tone-rev-border: #dec7e8;
+  --itp-bg-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%2394a3b8' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' opacity='0.14'%3E%3Cpath d='M16 42h44l6-12h24l7 12h11v12H16V42z'/%3E%3Ccircle cx='34' cy='54' r='5'/%3E%3Ccircle cx='88' cy='54' r='5'/%3E%3Ccircle cx='164' cy='46' r='16'/%3E%3Cpath d='M157 46l5 5 10-10'/%3E%3Cpath d='M140 128l18-18a9 9 0 0 0 12-12l-6 6-5-5 6-6a9 9 0 0 0-12 12l-18 18a4 4 0 0 0 5 5z'/%3E%3Crect x='26' y='132' width='46' height='14' rx='3'/%3E%3Cpath d='M36 139h26'/%3E%3Ccircle cx='112' cy='182' r='13'/%3E%3Cpath d='M112 169v6M112 189v6M99 182h6M119 182h6'/%3E%3C/g%3E%3C/svg%3E");
   --radius-md: 12px;
-  --radius-lg: 18px;
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 22px rgba(15, 23, 42, 0.08);
 }
 
-/* Reset si baza tipografica: Font Open Sans pentru text curent (16px) si Poppins pentru titluri, fara scroll orizontal. */
+/* Reset si baza tipografica: Font Open Sans (16px), Poppins pe titluri, fundal crem #e7dfd5 cu model SVG discret auto si zero scroll orizontal. */
 *,
 *::before,
 *::after {
@@ -36,6 +43,8 @@ body {
   line-height: 1.6;
   color: var(--text-body);
   background-color: var(--bg-page);
+  background-image: var(--itp-bg-pattern);
+  background-repeat: repeat;
   overflow-x: hidden;
 }
 
@@ -63,12 +72,14 @@ a {
   padding-inline: 20px;
 }
 
-/* Bara superioara (#topbar): Fundal inchis contrastant #0f172a cu text alb #ffffff pentru adresa, program si telefon. */
+/* Bara superioara (#topbar): Fundal crem --bg-muted (#f5f0e8) cu bordura #d8d3ca, text inchis #1e293b si telefoane albastre #1e40af. */
 .topbar {
-  background: var(--text-main);
-  color: #f8fafc;
-  font-size: 0.85rem;
-  padding-block: 8px;
+  background: var(--bg-muted);
+  color: var(--text-body);
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding-block: 7px;
 }
 
 .topbar-inner {
@@ -76,7 +87,7 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 10px 20px;
+  gap: 8px 20px;
 }
 
 .topbar-item {
@@ -87,15 +98,19 @@ a {
 
 .topbar-phone {
   font-weight: 700;
-  color: #93c5fd;
+  color: #1e40af;
 }
 
-/* Antet si navigare principala (#header): Fundal alb translucid cu blur discret, sticky sus si bordura #e2e8f0. */
+.topbar-phone:hover {
+  text-decoration: underline;
+}
+
+/* Antet si navigare principala (#header): Fundal alb-crem #faf7f2 cu bordura #d8d3ca si element activ rosu ACW (#dc2626 pe #fee2e2). */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(250, 247, 242, 0.96);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-light);
 }
@@ -148,15 +163,21 @@ a {
 
 .nav-link {
   font-weight: 600;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   color: var(--text-body);
-  padding: 8px 4px;
-  transition: color 0.15s ease;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
   color: var(--primary);
+  background: var(--bg-soft-blue);
+}
+
+.nav-link.active {
+  background: #fee2e2;
+  color: var(--accent-red);
 }
 
 .header-actions {
@@ -196,15 +217,15 @@ a {
 }
 
 .btn-outline {
-  background: #ffffff;
-  color: var(--text-main);
-  border-color: #cbd5e1;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
 }
 
 .btn-outline:hover {
-  background: var(--bg-soft-blue);
-  border-color: var(--primary);
-  color: var(--primary);
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1e40af;
 }
 
 .btn-wa {
@@ -254,8 +275,8 @@ a {
   width: 44px;
   height: 44px;
   padding: 10px;
-  background: #ffffff;
-  border: 1px solid var(--border-light);
+  background: var(--bg-soft-blue);
+  border: 1px solid #bfdbfe;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -264,14 +285,14 @@ a {
   display: block;
   height: 2px;
   width: 100%;
-  background: var(--text-main);
+  background: #1d4ed8;
   border-radius: 2px;
 }
 
-/* Sectiune Hero (#acasa): Gradient luminos discret (#eff6ff -> #ffffff), layout 2 coloane si badge-uri rapide. */
+/* Sectiune Hero (#acasa): Transparenta peste fundalul crem #e7dfd5 cu model SVG auto, card principal cu dunga rosie sus #dc2626 (4px). */
 .hero {
-  background: linear-gradient(180deg, var(--bg-soft-blue) 0%, #ffffff 100%);
-  padding-block: 56px 64px;
+  background: transparent;
+  padding-block: 52px 60px;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -288,8 +309,9 @@ a {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--primary);
-  background: #dbeafe;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
   padding: 5px 12px;
   border-radius: 999px;
   margin-bottom: 14px;
@@ -323,7 +345,7 @@ a {
 }
 
 .hero-badge-item {
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 12px 14px;
@@ -342,17 +364,18 @@ a {
 }
 
 .hero-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border-light);
+  border-top: 4px solid var(--accent-red);
   border-radius: var(--radius-lg);
   padding: 20px;
   box-shadow: var(--shadow-md);
 }
 
-/* Sectiuni generale (.section / .section-muted): Spatiere aerisita si antet centrat. */
+/* Sectiuni generale (.section / .section-muted): Sectiunile standard pastreaza fundalul #e7dfd5 cu model SVG, iar .section-muted crem #f5f0e8. */
 .section {
-  padding-block: 68px;
-  background: #ffffff;
+  padding-block: 64px;
+  background: transparent;
 }
 
 .section-muted {
@@ -399,6 +422,22 @@ a {
 .service-card:hover {
   border-color: #93c5fd;
   box-shadow: var(--shadow-md);
+}
+
+/* Tonuri soft din ITP-Programari pe cele 4 carduri servicii: ITP (#e6f0fb), Service (#faf7f2), Vopsitorie (#f9f1fb), Vulcanizare (#e3f7df). */
+.service-card:nth-child(1) {
+  background: var(--tone-prog-bg);
+  border-color: var(--tone-prog-border);
+}
+
+.service-card:nth-child(3) {
+  background: var(--tone-rev-bg);
+  border-color: var(--tone-rev-border);
+}
+
+.service-card:nth-child(4) {
+  background: var(--tone-final-bg);
+  border-color: var(--tone-final-border);
 }
 
 .service-icon {
@@ -474,10 +513,11 @@ a {
 }
 
 .stat-box {
-  background: var(--bg-page);
+  background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 16px;
+  box-shadow: var(--shadow-sm);
 }
 
 .stat-val {
@@ -501,7 +541,7 @@ a {
 }
 
 .work-card {
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -538,11 +578,12 @@ a {
 }
 
 .problem-card {
-  background: var(--bg-page);
+  background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-left: 4px solid var(--primary);
   border-radius: var(--radius-md);
   padding: 18px;
+  box-shadow: var(--shadow-sm);
 }
 
 .problem-card strong {
@@ -565,7 +606,7 @@ a {
 }
 
 .faq-item {
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 16px 20px;
@@ -595,10 +636,12 @@ a {
 }
 
 .contact-card {
-  background: var(--bg-page);
+  background: var(--bg-card);
   border: 1px solid var(--border-light);
+  border-top: 4px solid var(--accent-red);
   border-radius: var(--radius-lg);
   padding: 28px;
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-list {
@@ -636,7 +679,7 @@ a {
 .service-area-box {
   margin-top: 20px;
   padding: 14px 16px;
-  background: #ffffff;
+  background: var(--bg-muted);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   font-size: 0.85rem;
@@ -740,9 +783,10 @@ a {
   max-width: 520px;
   width: calc(100% - 24px);
   border: 1px solid var(--border-light);
+  border-top: 4px solid var(--accent-red);
   border-radius: var(--radius-lg);
   padding: 20px 22px;
-  background: #ffffff;
+  background: var(--bg-card);
   color: var(--text-body);
   box-shadow: var(--shadow-md);
 }
@@ -793,8 +837,9 @@ a {
   max-width: 560px;
   margin-inline: auto;
   z-index: 150;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary);
   border-radius: var(--radius-md);
   padding: 12px 16px;
   box-shadow: var(--shadow-md);
@@ -866,7 +911,7 @@ a {
     top: 72px;
     left: 0;
     right: 0;
-    background: #ffffff;
+    background: var(--bg-card);
     border-bottom: 1px solid var(--border-light);
     padding: 14px 20px;
     display: none;
@@ -895,6 +940,10 @@ a {
     padding-bottom: 66px;
   }
 
+  .hero {
+    padding-block: 32px 44px;
+  }
+
   .services-grid,
   .problems-grid,
   .gallery-grid,
@@ -916,7 +965,7 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 6px;
     padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(245, 240, 232, 0.97);
     border-top: 1px solid var(--border-light);
     box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
   }
