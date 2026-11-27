@@ -23,15 +23,21 @@
   <link rel="icon" type="image/png" href="./assets/images/aw-logo.png">
   <link rel="manifest" href="./site.webmanifest">
 
-  <!-- Fonturi Google (Poppins + Open Sans): Tipografie moderna, clara si lizibila pentru Tema Deschisa 2027. -->
+  <!-- Fonturi Google asincrone (Poppins + Open Sans): Eliminare blocare randare CSS si preload stiluri principale. -->
+  <link rel="preload" href="./assets/css/style.css?v=20261128" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+      rel="stylesheet">
+  </noscript>
 
-  <!-- Stiluri principale Light Theme 2027 -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Stiluri principale Tema Calda ACW -->
+  <link rel="stylesheet" href="./assets/css/style.css?v=20261128">
 </head>
 
 <body>
@@ -69,7 +75,8 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="#acasa" class="brand" aria-label="ACW Fălticeni Acasă">
-        <img src="./assets/images/aw-logo.png" alt="Sigla ACW Fălticeni" class="brand-logo" width="46" height="46">
+        <img src="./assets/images/aw-logo.webp" alt="Sigla ACW Fălticeni" class="brand-logo" width="46" height="46"
+          decoding="async">
         <div class="brand-text">
           <span class="brand-name">ACW • Fălticeni</span>
           <span class="brand-sub">ITP • Service • Vopsitorie • Vulcanizare</span>
@@ -148,8 +155,8 @@
 
         <div class="hero-visual">
           <div class="hero-card">
-            <img src="./assets/images/hero-banner.png" alt="Autoturism pregătit pentru verificare și service la ACW Fălticeni"
-              width="640" height="410">
+            <img src="./assets/images/hero-banner.webp" alt="Autoturism pregătit pentru verificare și service la ACW Fălticeni"
+              width="760" height="488" fetchpriority="high" decoding="async">
           </div>
         </div>
       </div>
@@ -261,8 +268,8 @@
     <section class="section" id="despre">
       <div class="container about-grid">
         <div class="about-media">
-          <img src="./assets/images/about-banner.png" alt="Atelierul ACW Fălticeni" class="about-img" width="540"
-            height="420">
+          <img src="./assets/images/about-banner.webp" alt="Atelierul ACW Fălticeni" class="about-img" width="540"
+            height="540" loading="lazy" decoding="async">
         </div>
 
         <div class="about-content">
@@ -305,8 +312,9 @@
 
         <div class="gallery-grid">
           <article class="work-card">
-            <img src="./assets/images/statie-itp-acw-falticeni.jpg"
-              alt="Stație ITP ACW Fălticeni — verificare tehnică Clasele I, II, III" loading="lazy" width="420" height="280">
+            <img src="./assets/images/statie-itp-acw-falticeni.webp"
+              alt="Stație ITP ACW Fălticeni — verificare tehnică Clasele I, II, III" loading="lazy" decoding="async"
+              width="640" height="523">
             <div class="work-body">
               <span class="work-tag">Stație ITP &amp; Mecanică</span>
               <h3>Verificare tehnică și siguranță</h3>
@@ -314,8 +322,9 @@
           </article>
 
           <article class="work-card">
-            <img src="./assets/images/service-auto-diagnoza-falticeni.jpg"
-              alt="Service auto și diagnoză computerizată ACW Fălticeni" loading="lazy" width="420" height="280">
+            <img src="./assets/images/service-auto-diagnoza-falticeni.webp"
+              alt="Service auto și diagnoză computerizată ACW Fălticeni" loading="lazy" decoding="async" width="640"
+              height="476">
             <div class="work-body">
               <span class="work-tag">Service Auto</span>
               <h3>Revizii și diagnoză completă</h3>
@@ -323,8 +332,8 @@
           </article>
 
           <article class="work-card">
-            <img src="./assets/images/vopsitorie-vulcanizare-acw-falticeni.jpg"
-              alt="Vopsitorie auto și vulcanizare ACW Fălticeni" loading="lazy" width="420" height="280">
+            <img src="./assets/images/vopsitorie-vulcanizare-acw-falticeni.webp"
+              alt="Vopsitorie auto și vulcanizare ACW Fălticeni" loading="lazy" decoding="async" width="640" height="788">
             <div class="work-body">
               <span class="work-tag">Vopsitorie &amp; Vulcanizare</span>
               <h3>Finisaj caroserie și roți echilibrate</h3>
@@ -514,7 +523,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="./assets/images/aw-logo.png" alt="ACW Fălticeni" width="38" height="38">
+        <img src="./assets/images/aw-logo.webp" alt="ACW Fălticeni" width="38" height="38" loading="lazy" decoding="async">
         <div>
           <strong>AUTOMOTIVE CENTER WERKSTAT S.R.L.</strong>
           <span>CUI: 47740129 • Reg. Com.: J33/463/2023 • Str. Magazia Gării, nr. 3F, Fălticeni, SV</span>
@@ -731,8 +740,8 @@
   }
   </script>
 
-  <!-- Script navigare mobila si an curent -->
-  <script src="./assets/js/main.js"></script>
+  <!-- Script navigare mobila si an curent (defer pentru randare non-blocking) -->
+  <script src="./assets/js/main.js?v=20261128" defer></script>
 </body>
 
 </html>
