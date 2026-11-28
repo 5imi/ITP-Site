@@ -24,7 +24,7 @@
   <link rel="manifest" href="./site.webmanifest">
 
   <!-- Fonturi Google asincrone (Poppins + Open Sans): Eliminare blocare randare CSS si preload stiluri principale. -->
-  <link rel="preload" href="./assets/css/style.css?v=20261128" as="style">
+  <link rel="preload" href="./assets/css/style.css?v=20261128-anim" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -37,7 +37,7 @@
   </noscript>
 
   <!-- Stiluri principale Tema Calda ACW -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=20261128">
+  <link rel="stylesheet" href="./assets/css/style.css?v=20261128-anim">
 </head>
 
 <body>
@@ -112,6 +112,8 @@
         </button>
       </div>
     </div>
+    <!-- Bara discreta de progres la scroll (#scrollProgress): Indicator vizual de parcurgere intre sectiunile paginii. -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   </header>
 
   <main id="continut">
@@ -738,8 +740,8 @@
   }
   </script>
 
-  <!-- Script navigare mobila si an curent (defer pentru randare non-blocking) -->
-  <script src="./assets/js/main.js?v=20261128" defer></script>
+  <!-- Script navigare mobila, animatii la scroll si an curent (defer pentru randare non-blocking) -->
+  <script src="./assets/js/main.js?v=20261128-anim" defer></script>
 </body>
 
 </html>
