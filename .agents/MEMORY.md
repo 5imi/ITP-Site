@@ -15,7 +15,7 @@
 - **Data înființării:** 2 martie 2023
 - **Adresă:** Str. Magazia Gării, nr. 3F, Fălticeni, jud. Suceava, cod poștal `725200`
 - **Cod CAEN principal:** `4520` — Întreținerea și repararea autovehiculelor
-- **Activități promovate pe site:** **Stație ITP • Service Auto • Vopsitorie • Vulcanizare**
+- **Activități promovate pe site:** **Stație ITP • Service Auto • Vopsitorie** (vulcanizare eliminată)
 - **Direcție vizuală:** **Temă Deschisă 2027 (Light Theme)** — fundal luminos curat, contrast ridicat, tipografie clară, stil sobru enterprise/auto.
 
 ## 3. Reguli Active
@@ -56,3 +56,4 @@
 - **Simplificare secțiune Contact V1 (`index.html`, `style.css`):** eliminat rândul duplicat `Facebook: ACW Fălticeni (Pagina oficială)` din `.contact-list`, reparată spațierea pe rândul Email și organizate butoanele din `.contact-actions` pe 2 rânduri logice (`.contact-actions-row`: `Sună + WhatsApp` pe rândul 1, `Google Maps + Waze + Facebook` pe rândul 2).
 - **Actualizare date firmă ONRC (`index.html`, `MEMORY.md`):** actualizat numărul de ordine în Registrul Comerțului la formatul nou `J2023000463330` (în `<footer>` și fereastra `<dialog id="gdprDialog">`).
 - **Animații la scroll, Scroll-Spy și tranziții fluide (`index.html`, `assets/css/style.css`, `assets/js/main.js`):** adăugate bara de progres la scroll (`#scrollProgress`) în header, scroll-spy automat pe `#mainNav` cu `aria-current="location"` și `scroll-margin-top: 84px`, apariție la scroll cu `IntersectionObserver` + stagger pe carduri exclusiv sub viewport-ul inițial (pentru LCP optim și CLS 0), efecte hover pe carduri și acordeon FAQ (`<details class="faq-item">`) animat cu Web Animations API, respectând integral `@media (prefers-reduced-motion: reduce)`.
+- **Actualizare ofertă servicii și personal ITP (`index.html`, `assets/css/style.css`, `README.md`, `MEMORY.md`):** înlocuit „3 linii ITP” cu **„3 inspectori ITP”** peste tot (Hero, Servicii, Despre noi, Probleme frecvente, FAQ, Schema.org) și eliminat complet departamentul/referințele de **Vulcanizare** (rămân cei 3 piloni: **Stație ITP**, **Service Auto & Mecanică**, **Vopsitorie Auto**), cu grilă `.services-grid` pe 3 coloane desktop / 1 coloană sub `960px`.

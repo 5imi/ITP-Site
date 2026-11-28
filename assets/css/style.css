@@ -472,10 +472,10 @@ section[id] {
   color: var(--text-body);
 }
 
-/* Grila Servicii (#servicii): 4 carduri egale (ITP, Service Auto, Vopsitorie, Vulcanizare) cu bordura clara si puncte cheie. */
+/* Grila Servicii (#servicii): 3 carduri egale (ITP, Service Auto, Vopsitorie) cu bordura clara si puncte cheie. */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -497,7 +497,7 @@ section[id] {
   box-shadow: var(--shadow-md);
 }
 
-/* Tonuri soft din ITP-Programari pe cele 4 carduri servicii: ITP (#e6f0fb), Service (#faf7f2), Vopsitorie (#f9f1fb), Vulcanizare (#e3f7df). */
+/* Tonuri soft din ITP-Programari pe cele 3 carduri servicii: ITP (#e6f0fb), Service (#faf7f2), Vopsitorie (#f9f1fb). */
 .service-card:nth-child(1) {
   background: var(--tone-prog-bg);
   border-color: var(--tone-prog-border);
@@ -506,11 +506,6 @@ section[id] {
 .service-card:nth-child(3) {
   background: var(--tone-rev-bg);
   border-color: var(--tone-rev-border);
-}
-
-.service-card:nth-child(4) {
-  background: var(--tone-final-bg);
-  border-color: var(--tone-final-border);
 }
 
 .service-icon {
@@ -536,11 +531,6 @@ section[id] {
 .service-icon-red {
   background: #fee2e2;
   color: #b91c1c;
-}
-
-.service-icon-orange {
-  background: #ffedd5;
-  color: #c2410c;
 }
 
 .service-card h3 {
@@ -613,7 +603,7 @@ section[id] {
   color: var(--text-muted);
 }
 
-/* Sectiune Galerie Atelier (#galerie): 3 carduri foto responsive pentru ITP, Service si Vopsitorie/Vulcanizare. */
+/* Sectiune Galerie Atelier (#galerie): 3 carduri foto responsive pentru ITP, Service si Vopsitorie. */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1019,11 +1009,11 @@ section[id] {
 }
 
 @media (max-width: 960px) {
-  .services-grid,
   .problems-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .services-grid,
   .hero-grid,
   .about-grid,
   .contact-grid,
